@@ -161,10 +161,10 @@ public class UsbSerial implements SerialInputOutputManager.Listener {
                 usbPermission = UsbPermission.Requested;
                 int flags;
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                    // Android 12 (S+) e versões mais recentes
+                    // Android 12 (S+) and above
                     flags = PendingIntent.FLAG_IMMUTABLE;
                 } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    // Versões anteriores a Android 12
+                    // Previous versions a Android 12
                     flags = PendingIntent.FLAG_MUTABLE;
                 } else {
                     flags = 0;
